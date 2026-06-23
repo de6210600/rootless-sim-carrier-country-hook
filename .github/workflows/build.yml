@@ -1,4 +1,4 @@
-name: Build CN Carrier Hook (Rootless)
+﻿name: Build CN Carrier Hook (Rootless)
 
 on:
   push:
@@ -18,6 +18,10 @@ jobs:
           git clone --depth=1 --recurse-submodules https://github.com/theos/theos.git $HOME/theos
           echo "THEOS=$HOME/theos" >> $GITHUB_ENV
           echo "THEOS_MAKE_PATH=$HOME/theos/makefiles" >> $GITHUB_ENV
+
+      - name: Fix Line Endings
+        run: |
+          find . -type f \( -name "*.plist" -o -name "control" \) -exec sed -i '' 's/\r$//' {} \;
 
       - name: Build Tweak
         run: |
