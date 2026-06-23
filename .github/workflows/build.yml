@@ -1,1 +1,34 @@
+name: Build CN Carrier Hook (Rootless)
 
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Theos
+        run: |
+          git clone --depth=1 https://github.com/theos/theos.git ~/theos
+          echo "THEOS=~/theos" >> $GITHUB_ENV
+
+      - name: Build Tweak
+        run: |
+          make package FINALPACKAGE=1
+
+      - name: List Packages
+        run: |
+          echo "=== Built packages ==="
+          ls -la packages/
+
+      - name: Upload Deb Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cn-carrier-hook-deb
+          path: packages/*.deb
+          if-no-files-found: error
