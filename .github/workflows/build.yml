@@ -14,6 +14,7 @@ jobs:
 
       - name: Setup Theos
         run: |
+          brew install ldid
           git clone --depth=1 --recurse-submodules https://github.com/theos/theos.git $HOME/theos
           echo "THEOS=$HOME/theos" >> $GITHUB_ENV
           echo "THEOS_MAKE_PATH=$HOME/theos/makefiles" >> $GITHUB_ENV
