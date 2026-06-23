@@ -14,7 +14,7 @@ jobs:
 
       - name: Setup Theos
         run: |
-          git clone --depth=1 https://github.com/theos/theos.git ~/theos
+          git clone --depth=1 --recurse-submodules https://github.com/theos/theos.git ~/theos
           echo "THEOS=~/theos" >> $GITHUB_ENV
 
       - name: Build Tweak
