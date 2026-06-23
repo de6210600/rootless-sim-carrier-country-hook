@@ -1,9 +1,9 @@
-Package: xi.fuckcpp.rootless-sim-carrier-country-hook
-Name: rootless-sim-carrier-country-hook
-Version: 0.0.1
+Package: com.de6210600.cn-carrier-hook
+Name: CN Carrier Hook
+Version: 1.0.0
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
-Maintainer: Xi
-Author: Xi
+Description: Force SIM card country code to China (+86) on rootless jailbreak. Hooks CTCarrier to return MCC=460, ISO=CN, MNC=007.
+Maintainer: de6210600
+Author: de6210600 (forked from seiry/rootless-sim-carrier-country-hook)
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)

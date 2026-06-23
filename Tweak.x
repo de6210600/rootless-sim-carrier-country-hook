@@ -3,17 +3,17 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <Foundation/Foundation.h>
 
-// Region changing to the USA
+// Region override to China (+86)
 %hook CTCarrier
 - (NSString *)mobileCountryCode {
-    return @"310";
+    return @"460";
 }
 
 - (NSString *)isoCountryCode {
-    return @"US";
+    return @"CN";
 }
 
 - (NSString *)mobileNetworkCode {
-    return @"032";
+    return @"007";
 }
 %end

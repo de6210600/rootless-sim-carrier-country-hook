@@ -2,10 +2,10 @@ ARCHS = arm64 arm64e
 TARGET = iphone:clang:14.5
 
 
-TWEAK_NAME = rootless-sim-carrier-country-hook
+TWEAK_NAME = cn-carrier-hook
 
-rootless-sim-carrier-country-hook_FILES = Tweak.x
-rootless-sim-carrier-country-hook_CFLAGS = -fobjc-arc
+cn-carrier-hook_FILES = Tweak.x
+cn-carrier-hook_CFLAGS = -fobjc-arc
 
 
 THEOS_PACKAGE_SCHEME = rootless
