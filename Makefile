@@ -4,7 +4,7 @@ TARGET = iphone:clang:latest
 TWEAK_NAME = cn-carrier-hook
 
 cn-carrier-hook_FILES = Tweak.x
-cn-carrier-hook_CFLAGS = -fobjc-arc
+cn-carrier-hook_CFLAGS = -fobjc-arc -Wno-deprecated-declarations
 
 THEOS_PACKAGE_SCHEME = rootless
 
