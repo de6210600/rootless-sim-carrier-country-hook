@@ -8,7 +8,5 @@ cn-carrier-hook_CFLAGS = -fobjc-arc
 
 THEOS_PACKAGE_SCHEME = rootless
 
-PREFIX = $(THEOS)/toolchain/XcodeDefault.xctoolchain/usr/bin/
-
 include $(THEOS)/makefiles/common.mk
 include $(THEOS)/makefiles/tweak.mk
