@@ -16,6 +16,7 @@ jobs:
         run: |
           git clone --depth=1 --recurse-submodules https://github.com/theos/theos.git ~/theos
           echo "THEOS=~/theos" >> $GITHUB_ENV
+          echo "THEOS_MAKE_PATH=~/theos/makefiles" >> $GITHUB_ENV
 
       - name: Build Tweak
         run: |
